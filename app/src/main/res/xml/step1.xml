@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- xml/step1.xml -->
+<?xml version="1.0" encoding="utf-8"?><!-- xml/step1.xml -->
 
-<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- TODO: Define a Transition -->
     <!-- A transition describes an animation via start and end state -->
     <Transition
-        app:constraintSetStart="@+id/start"
         app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
         app:duration="2000">
         <!-- TODO: Handle clicks -->
         <!-- MotionLayout will handle clicks on @id/red_star to "toggle" the animation between the start and end -->
         <OnClick
-            app:targetId="@id/red_star"
-            app:clickAction="toggle" />
+            app:clickAction="toggle"
+            app:targetId="@id/red_star" />
     </Transition>
 
     <!-- TODO: Define @id/start -->
@@ -34,7 +33,7 @@
             android:id="@+id/red_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </ConstraintSet>
 </MotionScene>
